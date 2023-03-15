@@ -1,0 +1,25 @@
+
+<form #creaEmpresa="ngForm" (ngSubmit)="onSubmit()">
+    <label for="rut">Rut del empleado:</label>
+    <input type="text" id="rut" name="rut" #rut="ngModel" [(ngModel)]="nuevoEmpleado.rut" required />
+    <br>
+    <label for="nombre">Nombre del empleado:</label>
+    <input type="text" id="nombre" name="nombre" #nombre="ngModel" [(ngModel)]="nuevoEmpleado.nombre" required />
+    <br>
+    <label for="email">Correo del empleado:</label>
+    <input type="text" id="email" name="email" #email="ngModel" [(ngModel)]="nuevoEmpleado.email" required />
+    <br>
+    <label for="empresa">Empresa del empleado:</label>
+    <input type="text" id="empresa" name="empresa" #empresa="ngModel" [(ngModel)]="nuevoEmpleado.empresa" required />
+    <br>
+    <input type="submit" value="Crear empresa">
+</form>
+
+<div *ngFor="let empleado of empleados">
+    <p>ID: {{empleado.id}}</p>
+    <p>Rut: {{empleado.rut}}</p>
+    <p>Nombre: {{empleado.nombre}}</p>
+    <p>Email: {{empleado.email}}</p>
+    <p>Empresa: {{empleado.empresa}}</p>
+    <hr>
+</div>
