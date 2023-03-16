@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EmpresaService } from 'src/app/services/empresa.service';
+import { Empresa } from 'src/app/models/empresa';
 
 @Component({
   selector: 'app-empresas',
@@ -10,19 +11,14 @@ import { EmpresaService } from 'src/app/services/empresa.service';
 
 export class EmpresasComponent {
   public empresas:Array<any>;
-  public nuevaEmpresa:any;
+  public nuevaEmpresa:Empresa;
 
   constructor(
     private myEmpresaService: EmpresaService
   ) {
     this.empresas = [];
 
-    this.nuevaEmpresa = {
-      nombre: '',
-      direccion: '',
-      rut: '',
-      telefono: ''
-    };
+    this.nuevaEmpresa = new Empresa(0, '', '', '', '');
   }
 
   ngOnInit() {
@@ -42,12 +38,7 @@ export class EmpresasComponent {
         this.empresas.push(response);
       });
 
-      this.nuevaEmpresa = {
-        nombre: '',
-        direccion: '',
-        rut: '',
-        telefono: ''
-      };
+      this.nuevaEmpresa = new Empresa(0, '', '', '', '');
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 import { EmpresaService } from 'src/app/services/empresa.service';
+import { Empleado } from 'src/app/models/empleado';
 
 @Component({
   selector: 'app-empleados',
@@ -11,7 +12,7 @@ import { EmpresaService } from 'src/app/services/empresa.service';
 export class EmpleadosComponent {
   public empleados:Array<any>;
   public empresas:Array<any>;
-  public nuevoEmpleado:any;
+  public nuevoEmpleado:Empleado;
 
   constructor(
     private myEmpleadoService: EmpleadoService,
@@ -19,13 +20,7 @@ export class EmpleadosComponent {
   ) {
     this.empleados = [];
     this.empresas = [];
-
-    this.nuevoEmpleado = {
-      nombre: '',
-      email: '',
-      rut: '',
-      empresa: ''
-    };
+    this.nuevoEmpleado = new Empleado(0, '', '', '', '');
   }
 
   ngOnInit() {
@@ -46,12 +41,7 @@ export class EmpleadosComponent {
         this.empleados.push(response);
       });
 
-      this.nuevoEmpleado = {
-        nombre: '',
-        email: '',
-        rut: '',
-        empresa: ''
-      };
+      this.nuevoEmpleado = new Empleado(0, '', '', '', '');
     }
   }
 }
