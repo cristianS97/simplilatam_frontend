@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Global } from './Global';
 
@@ -15,5 +15,11 @@ export class EmpresaService {
 
     getEmpresas(): Observable<any> {
         return this.myHttpClient.get(this.url + 'listadoEmpresa/');
+    }
+
+    crearEmpresa(empresa:any): Observable<any> {
+        let params = JSON.stringify(empresa);
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.myHttpClient.post(this.url + 'crearEmpresa/', params, {headers: headers});
     }
 }
