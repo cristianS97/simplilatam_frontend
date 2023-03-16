@@ -11,7 +11,7 @@
     <br>
     <label for="empresa">Empresa del empleado:</label>
     <select id="empresa" name="empresa" #empresa="ngModel" [(ngModel)]="nuevoEmpleado.empresa" required>
-        <option *ngFor="let empresa of empresas" value="{{empresa.id}}">{{empresa.nombre}}</option>
+        <option *ngFor="let empresa of empresas" value="{{empresa.id}}">{{empresa.nombre}} | {{empresa.rut}}</option>
     </select>
     <br>
     <input type="submit" value="Registrar Empleado">
@@ -21,7 +21,6 @@
     <p>ID: {{empleado.id}}</p>
     <p>Rut: {{empleado.rut}}</p>
     <p>Nombre: {{empleado.nombre}}</p>
-    <p>Email: {{empleado.email}}</p>
-    <p>Empresa: {{empleado.empresa}}</p>
+    <p>Empresa: {{empleado.empresa.nombre}}</p>
     <hr>
 </div>
