@@ -10,9 +10,11 @@
     <input type="text" id="email" name="email" #email="ngModel" [(ngModel)]="nuevoEmpleado.email" required />
     <br>
     <label for="empresa">Empresa del empleado:</label>
-    <input type="text" id="empresa" name="empresa" #empresa="ngModel" [(ngModel)]="nuevoEmpleado.empresa" required />
+    <select id="empresa" name="empresa" #empresa="ngModel" [(ngModel)]="nuevoEmpleado.empresa" required>
+        <option *ngFor="let empresa of empresas" value="{{empresa.id}}">{{empresa.nombre}}</option>
+    </select>
     <br>
-    <input type="submit" value="Crear empresa">
+    <input type="submit" value="Registrar Empleado">
 </form>
 
 <div *ngFor="let empleado of empleados">

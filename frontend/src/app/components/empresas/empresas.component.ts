@@ -18,7 +18,6 @@ export class EmpresasComponent {
     this.empresas = [];
 
     this.nuevaEmpresa = {
-      id: null,
       nombre: '',
       direccion: '',
       rut: '',
@@ -31,9 +30,9 @@ export class EmpresasComponent {
   }
 
   empresaValida() {
-    return this.nuevaEmpresa.nombre.trim().length > 0 && 
-            this.nuevaEmpresa.direccion.trim().length > 0 && 
-            this.nuevaEmpresa.rut.trim().length > 0 && 
+    return this.nuevaEmpresa.nombre.trim().length > 0 &&
+            this.nuevaEmpresa.direccion.trim().length > 0 &&
+            this.nuevaEmpresa.rut.trim().length > 0 &&
             this.nuevaEmpresa.telefono.trim().length > 0;
   }
 
@@ -44,7 +43,6 @@ export class EmpresasComponent {
       });
 
       this.nuevaEmpresa = {
-        id: null,
         nombre: '',
         direccion: '',
         rut: '',
