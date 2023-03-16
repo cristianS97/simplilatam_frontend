@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { EmpresasComponent } from './empresas/empresas.component';
-import { EmpleadosComponent } from './empleados/empleados.component';
-import { IndexComponent } from './index/index.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { EmpresasComponent } from './components/empresas/empresas.component';
+import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IndexComponent } from './index/index.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

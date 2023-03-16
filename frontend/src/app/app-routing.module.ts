@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmpleadosComponent } from './empleados/empleados.component';
-import { EmpresasComponent } from './empresas/empresas.component';
-import { IndexComponent } from './index/index.component';
+import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { EmpresasComponent } from './components/empresas/empresas.component';
+import { IndexComponent } from './components/index/index.component';
 
 const routes: Routes = [
   { path:'', component:IndexComponent },

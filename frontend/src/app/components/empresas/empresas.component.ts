@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
+import { EmpresaService } from 'src/app/services/empresa.service';
 
 @Component({
   selector: 'app-empresas',
   templateUrl: './empresas.component.html',
-  styleUrls: ['./empresas.component.css']
+  styleUrls: ['./empresas.component.css'],
+  providers: [EmpresaService]
 })
 
 export class EmpresasComponent {
   public empresas:Array<any>;
   public nuevaEmpresa:any;
 
-  constructor() {
-    this.empresas = [
-      {id:1, nombre:'GM Consulting', direccion:'Dirección fictisia 1', rut:'11.111.111-1', telefono:'+56912345678'},
-      {id:2, nombre:'Sunday Constructing', direccion:'Dirección fictisia 2', rut:'22.222.222-2', telefono:'+56923456789'}
-    ];
+  constructor(
+    private myEmpresaService: EmpresaService
+  ) {
+    this.empresas = [];
 
     this.nuevaEmpresa = {
       id: null,
@@ -23,6 +24,10 @@ export class EmpresasComponent {
       rut: '',
       telefono: ''
     };
+  }
+
+  ngOnInit() {
+    this.myEmpresaService.getEmpresas().subscribe(response => this.empresas = response);
   }
 
   onSubmit() {
