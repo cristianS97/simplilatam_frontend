@@ -17,9 +17,22 @@
     <input type="submit" value="Registrar Empleado">
 </form>
 
-<div *ngFor="let empleado of empleados">
-    <p>ID: {{empleado.id}}</p>
-    <p>Rut: {{empleado.rut}}</p>
-    <p>Nombre: {{empleado.nombre}}</p>
-    <hr>
-</div>
+<table>
+    <caption>Listado de Empleados</caption>
+    <thead>
+        <tr class="thead">
+            <th scope="col">ID</th>
+            <th scope="col">RUT</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">DETALLES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+            <td scope="row" data-label="ID">{{empleado.id}}</td>
+            <td data-label="RUT">{{empleado.rut}}</td>
+            <td data-label="NOMBRE">{{empleado.nombre}}</td>
+            <td data-label="DETALLES"><a [routerLink]="['/empleado/', empleado.id]">Detalles</a></td>
+        </tr>
+    </tbody>
+</table>

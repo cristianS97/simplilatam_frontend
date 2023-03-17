@@ -7,10 +7,22 @@
     <p>Teléfono: {{datosEmpresa.telefono}}</p>
     <p>N° Empleados: {{datosEmpresa.empleados.length}}</p>
 
-    <div *ngFor="let empleado of datosEmpresa.empleados">
-        <p>ID: {{empleado.id}}</p>
-        <p>Rut: {{empleado.rut}}</p>
-        <p>Nombre: {{empleado.nombre}}</p>
-        <p>Correo: {{empleado.email}}</p>
-    </div>
-</div>
+<table>
+    <caption>Empleados de la empresa</caption>
+    <thead>
+        <tr class="thead">
+            <th scope="col">ID</th>
+            <th scope="col">RUT</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of datosEmpresa.empleados">
+            <td scope="row" data-label="ID">{{empleado.id}}</td>
+            <td data-label="RUT">{{empleado.rut}}</td>
+            <td data-label="NOMBRE">{{empleado.nombre}}</td>
+            <td data-label="CORREO">{{empleado.email}}</td>
+        </tr>
+    </tbody>
+</table>

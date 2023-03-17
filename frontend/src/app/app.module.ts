@@ -11,7 +11,7 @@ import { EmpresasComponent } from './components/empresas/empresas.component';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { IndexComponent } from './components/index/index.component';
 import { EmpresaComponent } from './components/empresa/empresa.component';
-import { EmpleadoComponent } from './empleado/empleado.component';
+import { EmpleadoComponent } from './components/empleado/empleado.component';
 
 @NgModule({
   declarations: [
