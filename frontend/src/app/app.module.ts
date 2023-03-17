@@ -10,6 +10,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { EmpresasComponent } from './components/empresas/empresas.component';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { IndexComponent } from './components/index/index.component';
+import { EmpresaComponent } from './components/empresa/empresa.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IndexComponent } from './components/index/index.component';
     MenuComponent,
     EmpresasComponent,
     EmpleadosComponent,
-    IndexComponent
+    IndexComponent,
+    EmpresaComponent
   ],
   imports: [
     BrowserModule,

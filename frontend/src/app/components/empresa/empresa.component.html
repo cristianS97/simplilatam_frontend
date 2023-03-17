@@ -1,0 +1,16 @@
+
+<div *ngIf="datosEmpresa">
+    <p>ID: {{datosEmpresa.id}}</p>
+    <p>Rut: {{datosEmpresa.rut}}</p>
+    <p>Nombre: {{datosEmpresa.nombre}}</p>
+    <p>Dirección: {{datosEmpresa.direccion}}</p>
+    <p>Teléfono: {{datosEmpresa.telefono}}</p>
+    <p>N° Empleados: {{datosEmpresa.empleados.length}}</p>
+
+    <div *ngFor="let empleado of datosEmpresa.empleados">
+        <p>ID: {{empleado.id}}</p>
+        <p>Rut: {{empleado.rut}}</p>
+        <p>Nombre: {{empleado.nombre}}</p>
+        <p>Correo: {{empleado.email}}</p>
+    </div>
+</div>
