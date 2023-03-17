@@ -11,6 +11,7 @@ import { EmpresasComponent } from './components/empresas/empresas.component';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { IndexComponent } from './components/index/index.component';
 import { EmpresaComponent } from './components/empresa/empresa.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EmpresaComponent } from './components/empresa/empresa.component';
     EmpresasComponent,
     EmpleadosComponent,
     IndexComponent,
-    EmpresaComponent
+    EmpresaComponent,
+    EmpleadoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { EmpresaService } from 'src/app/services/empresa.service';
-import { Empresa } from 'src/app/models/empresa';
 
 @Component({
   selector: 'app-empresa',
@@ -14,8 +13,7 @@ export class EmpresaComponent {
   public datosEmpresa:any;
   constructor(
     public myEmpresaService: EmpresaService,
-    private myActivatedRoute: ActivatedRoute,
-    private myRouter: Router
+    private myActivatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit() {
