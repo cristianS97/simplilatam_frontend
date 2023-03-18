@@ -22,4 +22,9 @@ export class EmpleadoService {
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
         return this.myHttpClient.post(this.url + 'crearEmpleado/', params, {headers: headers});
     }
+
+    getEmpleado(idEmpleado:number): Observable<any> {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.myHttpClient.get(this.url + 'empleadoDetail/' + idEmpleado, {headers: headers});
+    }
 }
