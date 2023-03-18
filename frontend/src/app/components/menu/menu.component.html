@@ -1,5 +1,11 @@
-<nav>
+
+<!-- <nav>
     <ul>
+        <li>
+            <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <h1>{{title}}</h1>
+            </a>
+        </li>
         <li>
             <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
                 Inicio
@@ -16,4 +22,36 @@
             </a>
         </li>
     </ul>
+</nav> -->
+
+<nav class="nav-bar">
+	<div class="container">
+		<input type="checkbox" id="drop-down-cbox"/>
+		<label for="drop-down-cbox">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+
+		<h1 class="site-logo">{{title}}</h1>
+
+		<ul class="main-nav small-caps">
+			<li>
+                <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    Inicio
+                </a>
+            </li>
+			<li>
+                <a routerLink="/empresas" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    Mis Empresas
+                </a>
+            </li>
+			<li>
+                <a routerLink="/empleados" routerLinkActive="active" ariaCurrentWhenActive="page">
+                    Mis Empleados
+                </a>
+            </li>
+		</ul>
+		
+	</div>
 </nav>

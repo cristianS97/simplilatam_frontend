@@ -2,6 +2,7 @@
 <div class="container" [class.activeForm]="blur">
     <div class="popup" [style.display]="blur ? 'block' : 'none'">
         <form #creaEmpresa="ngForm" (ngSubmit)="onSubmit()">
+            <button (click)="onClick()">X</button>
             <label for="rut">Rut del empleado:</label>
             <input type="text" id="rut" name="rut" #rut="ngModel" [(ngModel)]="nuevoEmpleado.rut" required />
             <br>
