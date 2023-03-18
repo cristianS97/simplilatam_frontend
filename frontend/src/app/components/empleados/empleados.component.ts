@@ -10,6 +10,7 @@ import { Empleado } from 'src/app/models/empleado';
   providers: [EmpleadoService, EmpresaService]
 })
 export class EmpleadosComponent {
+  public blur: boolean = false;
   public empleados:Array<any>;
   public empresas:Array<any>;
   public nuevoEmpleado:Empleado;
@@ -21,6 +22,10 @@ export class EmpleadosComponent {
     this.empleados = [];
     this.empresas = [];
     this.nuevoEmpleado = new Empleado(0, '', '', '', '');
+  }
+
+  onClick() {
+    this.blur = !this.blur;
   }
 
   ngOnInit() {
@@ -40,6 +45,7 @@ export class EmpleadosComponent {
       this.myEmpleadoService.crearEmpleado(this.nuevoEmpleado).subscribe(response => {
         this.empleados.push(response);
       });
+      this.onClick();
 
       this.nuevoEmpleado = new Empleado(0, '', '', '', '');
     }

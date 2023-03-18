@@ -1,6 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+.activeForm {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .3);
+    background: #fff;
+    z-index: 1;
+}
 table {
-    /*   border: 1px solid #ccc; */
     border-collapse: collapse;
     margin: 0 auto;
     padding: 0;
@@ -68,10 +86,6 @@ table th {
         text-align: right;
     }
     table td::before {
-        /*
-        * aria-label has no advantage, it won't be read inside a table
-        content: attr(aria-label);
-        */
         content: attr(data-label);
         float: left;
         font-weight: bold;
