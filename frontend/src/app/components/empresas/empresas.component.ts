@@ -10,6 +10,7 @@ import { Empresa } from 'src/app/models/empresa';
 })
 
 export class EmpresasComponent {
+  public blur: boolean = false;
   public empresas:Array<any>;
   public nuevaEmpresa:Empresa;
 
@@ -25,6 +26,10 @@ export class EmpresasComponent {
     this.myEmpresaService.getEmpresas().subscribe(response => this.empresas = response);
   }
 
+  onClick() {
+    this.blur = !this.blur;
+  }
+
   empresaValida() {
     return this.nuevaEmpresa.nombre.trim().length > 0 &&
             this.nuevaEmpresa.direccion.trim().length > 0 &&
@@ -37,6 +42,7 @@ export class EmpresasComponent {
       this.myEmpresaService.crearEmpresa(this.nuevaEmpresa).subscribe(response => {
         this.empresas.push(response);
       });
+      this.onClick();
 
       this.nuevaEmpresa = new Empresa(0, '', '', '', '');
     }

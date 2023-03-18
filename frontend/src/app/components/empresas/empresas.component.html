@@ -1,36 +1,44 @@
 
-<form #creaEmpresa="ngForm" (ngSubmit)="onSubmit()">
-    <label for="rut">Rut de la empresa:</label>
-    <input type="text" id="rut" name="rut" #rut="ngModel" [(ngModel)]="nuevaEmpresa.rut" required />
-    <br>
-    <label for="nombre">Nombre de la empresa:</label>
-    <input type="text" id="nombre" name="nombre" #nombre="ngModel" [(ngModel)]="nuevaEmpresa.nombre" required />
-    <br>
-    <label for="direccion">Dirección de la empresa:</label>
-    <input type="text" id="direccion" name="direccion" #direccion="ngModel" [(ngModel)]="nuevaEmpresa.direccion" required />
-    <br>
-    <label for="telefono">Teléfono de la empresa:</label>
-    <input type="text" id="telefono" name="telefono" #telefono="ngModel" [(ngModel)]="nuevaEmpresa.telefono" required />
-    <br>
-    <input type="submit" value="Registrar Empresa">
-</form>
+<div class="container" [class.activeForm]="blur">
+    <div class="popup" [style.display]="blur ? 'block' : 'none'">
+        <form #creaEmpresa="ngForm" (ngSubmit)="onSubmit()">
+            <label for="rut">Rut de la empresa:</label>
+            <input type="text" id="rut" name="rut" #rut="ngModel" [(ngModel)]="nuevaEmpresa.rut" required />
+            <br>
+            <label for="nombre">Nombre de la empresa:</label>
+            <input type="text" id="nombre" name="nombre" #nombre="ngModel" [(ngModel)]="nuevaEmpresa.nombre" required />
+            <br>
+            <label for="direccion">Dirección de la empresa:</label>
+            <input type="text" id="direccion" name="direccion" #direccion="ngModel" [(ngModel)]="nuevaEmpresa.direccion" required />
+            <br>
+            <label for="telefono">Teléfono de la empresa:</label>
+            <input type="text" id="telefono" name="telefono" #telefono="ngModel" [(ngModel)]="nuevaEmpresa.telefono" required />
+            <br>
+            <input type="submit" value="Registrar Empresa">
+        </form>
+    </div>
+</div>
 
-<table>
-    <caption>Listado de Empresas</caption>
-    <thead>
-        <tr class="thead">
-            <th scope="col">ID</th>
-            <th scope="col">RUT</th>
-            <th scope="col">NOMBRE</th>
-            <th scope="col">DETALLES</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let empresa of empresas">
-            <td scope="row" data-label="ID">{{empresa.id}}</td>
-            <td data-label="RUT">{{empresa.rut}}</td>
-            <td data-label="NOMBRE">{{empresa.nombre}}</td>
-            <td data-label="DETALLES"><a [routerLink]="['/empresa/', empresa.id]">Detalles</a></td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <button (click)="onClick()">Crear Empresa</button>
+
+    <table>
+        <caption>Listado de Empresas</caption>
+        <thead>
+            <tr class="thead">
+                <th scope="col">ID</th>
+                <th scope="col">RUT</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">DETALLES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empresa of empresas">
+                <td scope="row" data-label="ID">{{empresa.id}}</td>
+                <td data-label="RUT">{{empresa.rut}}</td>
+                <td data-label="NOMBRE">{{empresa.nombre}}</td>
+                <td data-label="DETALLES"><a [routerLink]="['/empresa/', empresa.id]">Detalles</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
