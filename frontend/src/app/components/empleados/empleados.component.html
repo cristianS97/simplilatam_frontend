@@ -40,7 +40,7 @@
                 <td scope="row" data-label="ID">{{empleado.id}}</td>
                 <td data-label="RUT">{{empleado.rut}}</td>
                 <td data-label="NOMBRE">{{empleado.nombre}}</td>
-                <td data-label="DETALLES"><a [routerLink]="['/empleado/', empleado.id]">Detalles</a></td>
+                <td data-label="DETALLES"><a class="btn" [routerLink]="['/empleado/', empleado.id]">Detalles</a></td>
             </tr>
         </tbody>
     </table>
