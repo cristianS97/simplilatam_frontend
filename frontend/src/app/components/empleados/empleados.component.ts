@@ -25,8 +25,8 @@ export class EmpleadosComponent {
     this.myEmpleadoService.getEmpleados().subscribe(response => this.empleados = response);
   }
 
-  GetChildData(data:any){  
+  GetNuevoEmpleado(nuevoEmpleado:any){  
     this.onClick();
-    this.empleados.push(data);
+    this.empleados.push(nuevoEmpleado);
   }
 }

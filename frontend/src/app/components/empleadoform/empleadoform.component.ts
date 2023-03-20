@@ -33,14 +33,14 @@ export class EmpleadoformComponent {
             this.nuevoEmpleado.empresa.trim().length > 0;
   }
 
-  sendValues(response:any){
+  enviarNuevoEmpleado(response:any){
     this.myOutput.emit(response);
   }
 
   onSubmit() {
     if(this.empleadoValido()) {
       this.myEmpleadoService.crearEmpleado(this.nuevoEmpleado).subscribe(response => {
-        this.sendValues(response);
+        this.enviarNuevoEmpleado(response);
       });
 
       this.nuevoEmpleado = new Empleado(0, '', '', '', '');
