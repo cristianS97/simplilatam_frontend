@@ -3,7 +3,7 @@
 Desarrollo de la prueba técnica
 Frontend de la prueba
 
-## Table of Contents
+## Tabla de contenidos
 1. [Descripción del proyecto](#informacion-general)
 2. [Tecnologías usadas](#tecnologias)
 3. [Componentes](#componentes)
