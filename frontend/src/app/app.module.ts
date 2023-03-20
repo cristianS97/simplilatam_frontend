@@ -13,6 +13,7 @@ import { IndexComponent } from './components/index/index.component';
 import { EmpresaComponent } from './components/empresa/empresa.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { EmpleadoformComponent } from './components/empleadoform/empleadoform.component';
+import { EmpresaformComponent } from './components/empresaform/empresaform.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EmpleadoformComponent } from './components/empleadoform/empleadoform.co
     IndexComponent,
     EmpresaComponent,
     EmpleadoComponent,
-    EmpleadoformComponent
+    EmpleadoformComponent,
+    EmpresaformComponent
   ],
   imports: [
     BrowserModule,

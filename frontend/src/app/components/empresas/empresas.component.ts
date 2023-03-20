@@ -30,21 +30,8 @@ export class EmpresasComponent {
     this.blur = !this.blur;
   }
 
-  empresaValida() {
-    return this.nuevaEmpresa.nombre.trim().length > 0 &&
-            this.nuevaEmpresa.direccion.trim().length > 0 &&
-            this.nuevaEmpresa.rut.trim().length > 0 &&
-            this.nuevaEmpresa.telefono.trim().length > 0;
-  }
-
-  onSubmit() {
-    if(this.empresaValida()) {
-      this.myEmpresaService.crearEmpresa(this.nuevaEmpresa).subscribe(response => {
-        this.empresas.push(response);
-      });
-      this.onClick();
-
-      this.nuevaEmpresa = new Empresa(0, '', '', '', '');
-    }
+  GetNuevaEmpresa(nuevaEmpresa:any){  
+    this.onClick();
+    this.empresas.push(nuevaEmpresa);
   }
 }
