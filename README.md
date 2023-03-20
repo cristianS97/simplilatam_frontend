@@ -1,29 +1,45 @@
 # simplilatam_frontend
-
-# Project name
 ***
-Short Description about the project.
+Desarrollo de la prueba técnica
+Frontend de la prueba
 
 ## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
+1. [Descripción del proyecto](#informacion-general)
+2. [Tecnologías usadas](#tecnologias)
+3. [Componentes](#componentes)
 
-## Table of Contents
-<a name="general-info"></a>
-### General Info
-
-## General Info
+## Información general
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
-### Screenshot
-![Image text](/path/to/the/screenshot.png)
+Frontend del sitio el cual se alimenta desde un backend realizado con Django.
+En este se muestra una página principal junto con un menú el cuál cuenta con las secciones de crear una empresa y crear un empleado
 
-## Technologies
+#### Información para crear una empresa
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+1. nombre: Nombre de la empresa a registrar
+2. direccion: Dirección de la empresa
+3. rut: Rut de la empresa
+4. telefono: Télefono de la empresa
+
+#### Información para crear un empleado
+***
+1. nombre: Nombre del empleado
+2. email: Correo electronico del empleado
+3. rut: Rut del empleado
+4. empresa: Empresa a la que pertenece el empleado
+
+## Tecnologías
+***
+Lista de tecnologías utilizadas en el proyecto:
+
+1. [Angular](https://angular.io/): Versión 15.2.0
+2. [Typescript](https://www.typescriptlang.org/): Versión 4.9.4
+
+## Componentes
+1. Menu: Menú del sitio
+2. index: Página principal
+3. empresas: Componente donde se muestra el listado de las empresas creadas
+4. empresaform: Formulario de creación de empresas
+5. empresa: Información detallada de la empresa
+6. empleados: Componente donde se muestra el listado de los empleados creados
+7. empleadoform: Formulario de creación de empleados
+8. empleado: Información detallada del empleado
