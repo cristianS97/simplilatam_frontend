@@ -12,6 +12,7 @@ import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { IndexComponent } from './components/index/index.component';
 import { EmpresaComponent } from './components/empresa/empresa.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
+import { EmpleadoformComponent } from './components/empleadoform/empleadoform.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmpleadoComponent } from './components/empleado/empleado.component';
     EmpleadosComponent,
     IndexComponent,
     EmpresaComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    EmpleadoformComponent
   ],
   imports: [
     BrowserModule,
