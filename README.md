@@ -7,6 +7,7 @@ Frontend de la prueba
 1. [Descripción del proyecto](#informacion-general)
 2. [Tecnologías usadas](#tecnologias)
 3. [Componentes](#componentes)
+4. [Docker](#docker)
 
 ## Información general
 ***
@@ -43,3 +44,7 @@ Lista de tecnologías utilizadas en el proyecto:
 6. empleados: Componente donde se muestra el listado de los empleados creados
 7. empleadoform: Formulario de creación de empleados
 8. empleado: Información detallada del empleado
+
+## Docker
+1. Crear imagen: docker build -t angular-frontend-simplilatam .
+2. Correr imagen: docker run -d -p 4200:80 --name fronten angular-frontend-simplilatam
